@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الموقع الجامعي - الجداول</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* أنماط إضافية للجداول */
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .schedule-table th, .schedule-table td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .schedule-table thead {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .schedule-table tbody tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .schedule-table tbody tr:hover {
+            background: #f1f1f1;
+        }
+
+        .no-schedule {
+            text-align: center;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin: 30px 0;
+        }
+
+        .no-schedule i {
+            font-size: 3rem;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        .no-schedule p {
+            color: #777;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <svg width="40" height="40" viewBox="0 0 50 50">
+                        <circle cx="25" cy="25" r="20" fill="#2c3e50"/>
+                        <path d="M25 10 L30 20 L40 20 L32 27 L35 37 L25 30 L15 37 L18 27 L10 20 L20 20 Z" fill="#ecf0f1"/>
+                    </svg>
+                    <span>الموقع الجامعي</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li class="nav-item"><a href="library.html" class="nav-link"><i class="fas fa-book"></i> المكتبة</a></li>
+                <li class="nav-item"><a href="schedule.html" class="nav-link active"><i class="fas fa-calendar-alt"></i> الجداول</a></li>
+                <li class="nav-item"><a href="gpa.html" class="nav-link"><i class="fas fa-calculator"></i> حاسبة GPA</a></li>
+                <li class="nav-item"><a href="links.html" class="nav-link"><i class="fas fa-link"></i> الروابط</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- البانر -->
+    <header class="banner">
+        <div class="banner-content">
+            <h1>جداول المحاضرات والامتحانات</h1>
+            <p>اطلع على جميع الجداول الدراسية ومواعيد الامتحانات</p>
+        </div>
+        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,192C672,181,768,139,864,138.7C960,139,1056,181,1152,186.7C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container">
+        <section class="welcome-section">
+            <h2>جداول المحاضرات والامتحانات</h2>
+            <p>اختر القسم والمستوى والسكشن لعرض الجدول الخاص بك</p>
+        </section>
+
+        <!-- نظام التصفية -->
+        <div class="filter-system">
+            <div class="filter-group">
+                <label for="department">اختر القسم:</label>
+                <select id="department" class="filter-select">
+                    <option value="">-- اختر القسم --</option>
+                    <option value="civil">هندسة مدنية</option>
+                    <option value="architecture">هندسة عمارة</option>
+                    <option value="electrical">هندسة كهربائية</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="level">اختر المستوى:</label>
+                <select id="level" class="filter-select" disabled>
+                    <option value="">-- اختر المستوى --</option>
+                    <option value="1">المستوى الأول</option>
+                    <option value="2">المستوى الثاني</option>
+                    <option value="3">المستوى الثالث</option>
+                    <option value="4">المستوى الرابع</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="section">اختر السكشن:</label>
+                <select id="section" class="filter-select" disabled>
+                    <option value="">-- اختر السكشن --</option>
+                    <option value="1">سكشن 1</option>
+                    <option value="2">سكشن 2</option>
+                    <option value="3">سكشن 3</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- عرض الجدول -->
+        <div id="scheduleContainer">
+            <!-- سيتم ملء الجدول هنا عبر JavaScript -->
+        </div>
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <p>&copy; 2023 الموقع الجامعي. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <!-- زر العودة للأعلى -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // بيانات الجداول (يمكن توسيعها بسهولة)
+        const schedulesData = {
+            civil: {
+                1: {
+                    1: [
+                        { day: "الأحد", subject: "رياضيات 1", room: "قاعة 101", time: "08:00 - 10:00" },
+                        { day: "الأحد", subject: "فيزياء 1", room: "معمل الفيزياء", time: "10:30 - 12:30" },
+                        { day: "الاثنين", subject: "لغة إنجليزية", room: "قاعة 203", time: "09:00 - 11:00" },
+                        { day: "الاثنين", subject: "مقدمة في البرمجة", room: "معمل الحاسوب 1", time: "11:30 - 13:30" },
+                        { day: "الثلاثاء", subject: "رياضيات 1", room: "قاعة 102", time: "08:00 - 10:00" },
+                        { day: "الثلاثاء", subject: "فيزياء 1", room: "قاعة 105", time: "10:30 - 12:30" },
+                        { day: "الأربعاء", subject: "تربية وطنية", room: "قاعة 301", time: "09:00 - 11:00" }
+                    ],
+                    2: [
+                        { day: "الأحد", subject: "رياضيات 1", room: "قاعة 201", time: "10:00 - 12:00" },
+                        { day: "الأحد", subject: "فيزياء 1", room: "معمل الفيزياء", time: "12:30 - 14:30" },
+                        { day: "الاثنين", subject: "لغة إنجليزية", room: "قاعة 103", time: "11:00 - 13:00" },
+                        { day: "الاثنين", subject: "مقدمة في البرمجة", room: "معمل الحاسوب 2", time: "13:30 - 15:30" },
+                        { day: "الثلاثاء", subject: "رياضيات 1", room: "قاعة 202", time: "10:00 - 12:00" },
+                        { day: "الثلاثاء", subject: "فيزياء 1", room: "قاعة 205", time: "12:30 - 14:30" },
+                        { day: "الأربعاء", subject: "تربية وطنية", room: "قاعة 302", time: "11:00 - 13:00" }
+                    ]
+                },
+                2: {
+                    1: [
+                        { day: "الأحد", subject: "رياضيات 2", room: "قاعة 301", time: "08:00 - 10:00" },
+                        { day: "الأحد", subject: "مقاومة المواد", room: "معمل الميكانيكا", time: "10:30 - 12:30" },
+                        { day: "الاثنين", subject: "رسم هندسي", room: "استديو الرسم", time: "09:00 - 11:00" },
+                        { day: "الاثنين", subject: "إحصاء هندسي", room: "قاعة 303", time: "11:30 - 13:30" },
+                        { day: "الثلاثاء", subject: "رياضيات 2", room: "قاعة 302", time: "08:00 - 10:00" },
+                        { day: "الثلاثاء", subject: "مقاومة المواد", room: "قاعة 305", time: "10:30 - 12:30" },
+                        { day: "الأربعاء", subject: "مواد بناء", room: "معمل المواد", time: "09:00 - 11:00" }
+                    ],
+                    2: [
+                        { day: "الأحد", subject: "رياضيات 2", room: "قاعة 401", time: "10:00 - 12:00" },
+                        { day: "الأحد", subject: "مقاومة المواد", room: "معمل الميكانيكا", time: "12:30 - 14:30" },
+                        { day: "الاثنين", subject: "رسم هندسي", room: "استديو الرسم", time: "11:00 - 13:00" },
+                        { day: "الاثنين", subject: "إحصاء هندسي", room: "قاعة 403", time: "13:30 - 15:30" },
+                        { day: "الثلاثاء", subject: "رياضيات 2", room: "قاعة 402", time: "10:00 - 12:00" },
+                        { day: "الثلاثاء", subject: "مقاومة المواد", room: "قاعة 405", time: "12:30 - 14:30" },
+                        { day: "الأربعاء", subject: "مواد بناء", room: "معمل المواد", time: "11:00 - 13:00" }
+                    ]
+                }
+            },
+            architecture: {
+                1: {
+                    1: [
+                        { day: "الأحد", subject: "تصميم 1", room: "استديو التصميم 1", time: "08:00 - 12:00" },
+                        { day: "الاثنين", subject: "رسم معماري", room: "استديو الرسم", time: "09:00 - 12:00" },
+                        { day: "الاثنين", subject: "نظرية العمارة", room: "قاعة 501", time: "13:00 - 15:00" },
+                        { day: "الثلاثاء", subject: "تصميم 1", room: "استديو التصميم 1", time: "08:00 - 12:00" },
+                        { day: "الأربعاء", subject: "تاريخ العمارة", room: "قاعة 502", time: "09:00 - 11:00" },
+                        { day: "الأربعاء", subject: "مواد بناء", room: "معمل المواد", time: "11:30 - 13:30" }
+                    ]
+                }
+            },
+            electrical: {
+                1: {
+                    1: [
+                        { day: "الأحد", subject: "دوائر كهربائية 1", room: "قاعة 601", time: "08:00 - 10:00" },
+                        { day: "الأحد", subject: "إلكترونيات 1", room: "معمل الإلكترونيات", time: "10:30 - 12:30" },
+                        { day: "الاثنين", subject: "رياضيات 1", room: "قاعة 603", time: "09:00 - 11:00" },
+                        { day: "الاثنين", subject: "برمجة", room: "معمل الحاسوب 3", time: "11:30 - 13:30" },
+                        { day: "الثلاثاء", subject: "دوائر كهربائية 1", room: "قاعة 602", time: "08:00 - 10:00" },
+                        { day: "الثلاثاء", subject: "إلكترونيات 1", room: "قاعة 605", time: "10:30 - 12:30" },
+                        { day: "الأربعاء", subject: "فيزياء 1", room: "قاعة 604", time: "09:00 - 11:00" }
+                    ]
+                }
+            }
+        };
+
+        // عناصر DOM
+        const departmentSelect = document.getElementById('department');
+        const levelSelect = document.getElementById('level');
+        const sectionSelect = document.getElementById('section');
+        const scheduleContainer = document.getElementById('scheduleContainer');
+
+        // تفعيل اختيار المستوى عند اختيار القسم
+        departmentSelect.addEventListener('change', function() {
+            if (this.value) {
+                levelSelect.disabled = false;
+                levelSelect.value = '';
+                sectionSelect.disabled = true;
+                sectionSelect.value = '';
+                scheduleContainer.innerHTML = ''; // مسح المحتوى السابق
+            } else {
+                levelSelect.disabled = true;
+                levelSelect.value = '';
+                sectionSelect.disabled = true;
+                sectionSelect.value = '';
+                scheduleContainer.innerHTML = '';
+            }
+        });
+
+        // تفعيل اختيار السكشن عند اختيار المستوى
+        levelSelect.addEventListener('change', function() {
+            if (this.value) {
+                sectionSelect.disabled = false;
+                sectionSelect.value = '';
+                scheduleContainer.innerHTML = ''; // مسح المحتوى السابق
+            } else {
+                sectionSelect.disabled = true;
+                sectionSelect.value = '';
+                scheduleContainer.innerHTML = '';
+            }
+        });
+
+        // عرض الجدول عند اختيار السكشن
+        sectionSelect.addEventListener('change', function() {
+            const department = departmentSelect.value;
+            const level = levelSelect.value;
+            const section = this.value;
+            
+            if (department && level && section) {
+                displaySchedule(department, level, section);
+            }
+        });
+
+        // عرض الجدول
+        function displaySchedule(department, level, section) {
+            const schedule = schedulesData[department] && 
+                            schedulesData[department][level] && 
+                            schedulesData[department][level][section];
+            
+            if (!schedule || schedule.length === 0) {
+                scheduleContainer.innerHTML = `
+                    <div class="no-schedule">
+                        <i class="fas fa-calendar-times"></i>
+                        <p>لا يوجد جدول متاح لهذه الاختيارات حالياً</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // ترتيب الجدول حسب الأيام
+            const daysOrder = {
+                "الأحد": 1,
+                "الاثنين": 2,
+                "الثلاثاء": 3,
+                "الأربعاء": 4,
+                "الخميس": 5
+            };
+            
+            schedule.sort((a, b) => daysOrder[a.day] - daysOrder[b.day]);
+            
+            let html = `<h3 class="materials-title">جدول المحاضرات - ${getDepartmentName(department)} - المستوى ${level} - السكشن ${section}</h3>`;
+            html += '<table class="schedule-table">';
+            html += `
+                <thead>
+                    <tr>
+                        <th>اليوم</th>
+                        <th>المادة</th>
+                        <th>القاعة</th>
+                        <th>الوقت</th>
+                    </tr>
+                </thead>
+                <tbody>
+            `;
+            
+            schedule.forEach(item => {
+                html += `
+                    <tr>
+                        <td>${item.day}</td>
+                        <td>${item.subject}</td>
+                        <td>${item.room}</td>
+                        <td>${item.time}</td>
+                    </tr>
+                `;
+            });
+            
+            html += '</tbody></table>';
+            scheduleContainer.innerHTML = html;
+        }
+
+        // الحصول على اسم القسم بالعربية
+        function getDepartmentName(department) {
+            const names = {
+                "civil": "هندسة مدنية",
+                "architecture": "هندسة عمارة",
+                "electrical": "هندسة كهربائية"
+            };
+            return names[department] || department;
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
