@@ -3,349 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الموقع الجامعي - الطالب</title>
+    <title>الموقع الجامعي - الرئيسية</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- زر الرجوع للأعلى -->
-    <button id="backToTop" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- الهيدر -->
-    <header>
-        <div class="banner">
-            <svg class="banner-svg" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style="stop-color:#1a6fc4;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#0c4080;stop-opacity:1" />
-                    </linearGradient>
-                </defs>
-                <path fill="url(#grad1)" d="M0,100 Q300,250 600,100 Q900,-50 1200,100 L1200,0 L0,0 Z"></path>
-                <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="48" font-weight="bold" dy=".3em">الموقع الجامعي</text>
-                <text x="50%" y="65%" text-anchor="middle" fill="white" font-size="24" dy=".3em">مرحباً بك في موقعك التعليمي الشامل</text>
-            </svg>
-        </div>
-        
-        <nav class="navbar">
-            <ul>
-                <li><a href="#home" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
-                <li><a href="#library"><i class="fas fa-book"></i> المكتبة</a></li>
-                <li><a href="#schedules"><i class="fas fa-calendar-alt"></i> الجداول</a></li>
-                <li><a href="#gpa"><i class="fas fa-calculator"></i> حاسبة GPA</a></li>
-                <li><a href="#links"><i class="fas fa-link"></i> الروابط</a></li>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <svg width="40" height="40" viewBox="0 0 50 50">
+                        <circle cx="25" cy="25" r="20" fill="#2c3e50"/>
+                        <path d="M25 10 L30 20 L40 20 L32 27 L35 37 L25 30 L15 37 L18 27 L10 20 L20 20 Z" fill="#ecf0f1"/>
+                    </svg>
+                    <span>الموقع الجامعي</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li class="nav-item"><a href="library.html" class="nav-link"><i class="fas fa-book"></i> المكتبة</a></li>
+                <li class="nav-item"><a href="schedule.html" class="nav-link"><i class="fas fa-calendar-alt"></i> الجداول</a></li>
+                <li class="nav-item"><a href="gpa.html" class="nav-link"><i class="fas fa-calculator"></i> حاسبة GPA</a></li>
+                <li class="nav-item"><a href="links.html" class="nav-link"><i class="fas fa-link"></i> الروابط</a></li>
             </ul>
-        </nav>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- البانر الرئيسي -->
+    <header class="banner">
+        <div class="banner-content">
+            <h1>مرحباً بك في الموقع الجامعي</h1>
+            <p>منصة شاملة لخدمات الطلاب الجامعيين</p>
+        </div>
+        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,192C672,181,768,139,864,138.7C960,139,1056,181,1152,186.7C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
     </header>
 
     <!-- المحتوى الرئيسي -->
-    <main>
-        <!-- الصفحة الرئيسية -->
-        <section id="home" class="page active">
-            <h2>مرحباً بك في الموقع الجامعي</h2>
-            <div class="welcome-content">
-                <p>هذا الموقع صمم خصيصاً لخدمة الطلاب الجامعيين ويوفر جميع الأدوات والموارد التي قد تحتاجها خلال رحلتك الدراسية.</p>
-                
-                <div class="features">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg viewBox="0 0 100 100" width="60" height="60">
-                                <circle cx="50" cy="50" r="40" fill="#1a6fc4" opacity="0.2"/>
-                                <path d="M25,30 L75,30 L75,75 L25,75 Z" fill="none" stroke="#1a6fc4" stroke-width="5"/>
-                                <path d="M35,30 L35,20 L65,20 L65,30" fill="none" stroke="#1a6fc4" stroke-width="5"/>
-                                <text x="50" y="55" text-anchor="middle" fill="#1a6fc4" font-size="16">📚</text>
-                            </svg>
-                        </div>
-                        <h3>مكتبة الكتب</h3>
-                        <p>جميع الملازم والكتب الدراسية في مكان واحد</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg viewBox="0 0 100 100" width="60" height="60">
-                                <circle cx="50" cy="50" r="40" fill="#1a6fc4" opacity="0.2"/>
-                                <rect x="20" y="30" width="60" height="40" fill="none" stroke="#1a6fc4" stroke-width="5"/>
-                                <line x1="20" y1="40" x2="80" y2="40" stroke="#1a6fc4" stroke-width="3"/>
-                                <line x1="40" y1="30" x2="40" y2="70" stroke="#1a6fc4" stroke-width="3"/>
-                                <text x="50" y="55" text-anchor="middle" fill="#1a6fc4" font-size="16">📅</text>
-                            </svg>
-                        </div>
-                        <h3>جداول المحاضرات</h3>
-                        <p>جداول المحاضرات والامتحانات بشكل منظم</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg viewBox="0 0 100 100" width="60" height="60">
-                                <circle cx="50" cy="50" r="40" fill="#1a6fc4" opacity="0.2"/>
-                                <rect x="30" y="25" width="40" height="40" fill="none" stroke="#1a6fc4" stroke-width="5"/>
-                                <line x1="30" y1="35" x2="70" y2="35" stroke="#1a6fc4" stroke-width="3"/>
-                                <line x1="30" y1="45" x2="70" y2="45" stroke="#1a6fc4" stroke-width="3"/>
-                                <line x1="30" y1="55" x2="70" y2="55" stroke="#1a6fc4" stroke-width="3"/>
-                                <text x="50" y="55" text-anchor="middle" fill="#1a6fc4" font-size="16">🧮</text>
-                            </svg>
-                        </div>
-                        <h3>حاسبة GPA</h3>
-                        <p>احسب معدلك التراكمي بسهولة</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg viewBox="0 0 100 100" width="60" height="60">
-                                <circle cx="50" cy="50" r="40" fill="#1a6fc4" opacity="0.2"/>
-                                <circle cx="50" cy="35" r="10" fill="none" stroke="#1a6fc4" stroke-width="5"/>
-                                <path d="M20,70 C20,50 80,50 80,70" fill="none" stroke="#1a6fc4" stroke-width="5"/>
-                                <text x="50" y="55" text-anchor="middle" fill="#1a6fc4" font-size="16">🔗</text>
-                            </svg>
-                        </div>
-                        <h3>روابط مفيدة</h3>
-                        <p>جميع الروابط المهمة في مكان واحد</p>
-                    </div>
-                </div>
-            </div>
+    <main class="container">
+        <section class="welcome-section">
+            <h2>مرحباً بك في منصتك التعليمية الشاملة</h2>
+            <p>هذا الموقع يوفر لك جميع الأدوات والموارد التي تحتاجها خلال رحلتك الجامعية</p>
         </section>
 
-        <!-- صفحة المكتبة -->
-        <section id="library" class="page">
-            <h2><i class="fas fa-book"></i> مكتبة الملازم والكتب</h2>
-            
-            <div class="library-table">
-                <div class="table-row header">
-                    <div class="table-cell icon-cell">الأيقونة</div>
-                    <div class="table-cell">اسم المادة</div>
-                    <div class="table-cell action-cell">التحميل</div>
+        <section class="features">
+            <h2>خدماتنا</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>مكتبة الملازم والكتب</h3>
+                    <p>وصول سهل لجميع الكتب والملازم الدراسية</p>
+                    <a href="library.html" class="btn">استكشف المكتبة</a>
                 </div>
-                
-                <div class="table-row">
-                    <div class="table-cell icon-cell"><i class="fas fa-book"></i></div>
-                    <div class="table-cell">رياضيات هندسية</div>
-                    <div class="table-cell action-cell"><a href="#" class="download-btn">تحميل <i class="fas fa-download"></i></a></div>
-                </div>
-                
-                <div class="table-row">
-                    <div class="table-cell icon-cell"><i class="fas fa-book"></i></div>
-                    <div class="table-cell">فيزياء عامة</div>
-                    <div class="table-cell action-cell"><a href="#" class="download-btn">تحميل <i class="fas fa-download"></i></a></div>
-                </div>
-                
-                <div class="table-row">
-                    <div class="table-cell icon-cell"><i class="fas fa-book"></i></div>
-                    <div class="table-cell">برمجة الحاسوب</div>
-                    <div class="table-cell action-cell"><a href="#" class="download-btn">تحميل <i class="fas fa-download"></i></a></div>
-                </div>
-                
-                <div class="table-row">
-                    <div class="table-cell icon-cell"><i class="fas fa-book"></i></div>
-                    <div class="table-cell">هندسة الكهرباء</div>
-                    <div class="table-cell action-cell"><a href="#" class="download-btn">تحميل <i class="fas fa-download"></i></a></div>
-                </div>
-                
-                <div class="table-row">
-                    <div class="table-cell icon-cell"><i class="fas fa-book"></i></div>
-                    <div class="table-cell">تفاضل وتكامل</div>
-                    <div class="table-cell action-cell"><a href="#" class="download-btn">تحميل <i class="fas fa-download"></i></a></div>
-                </div>
-            </div>
-        </section>
 
-        <!-- صفحة الجداول -->
-        <section id="schedules" class="page">
-            <h2><i class="fas fa-calendar-alt"></i> جداول المحاضرات والامتحانات</h2>
-            
-            <div class="schedules-container">
-                <div class="schedule-card">
-                    <div class="schedule-icon">
-                        <svg viewBox="0 0 100 100" width="80" height="80">
-                            <rect x="10" y="20" width="80" height="70" rx="5" fill="#e6f2ff" stroke="#1a6fc4" stroke-width="3"/>
-                            <rect x="10" y="20" width="80" height="15" fill="#1a6fc4"/>
-                            <text x="50" y="32" text-anchor="middle" fill="white" font-size="10">جدول المحاضرات</text>
-                            <line x1="10" y1="40" x2="90" y2="40" stroke="#1a6fc4" stroke-width="2"/>
-                            <line x1="30" y1="20" x2="30" y2="90" stroke="#1a6fc4" stroke-width="2"/>
-                            <text x="20" y="50" text-anchor="middle" fill="#1a6fc4" font-size="8">السبت</text>
-                            <text x="20" y="65" text-anchor="middle" fill="#1a6fc4" font-size="8">الأحد</text>
-                            <text x="20" y="80" text-anchor="middle" fill="#1a6fc4" font-size="8">الاثنين</text>
-                        </svg>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
                     </div>
-                    <h3>جدول المحاضرات - الفصل الأول</h3>
-                    <a href="#" class="view-btn">عرض الجدول <i class="fas fa-eye"></i></a>
+                    <h3>جداول المحاضرات والامتحانات</h3>
+                    <p>اطلع على جداولك الدراسية ومواعيد الامتحانات</p>
+                    <a href="schedule.html" class="btn">عرض الجداول</a>
                 </div>
-                
-                <div class="schedule-card">
-                    <div class="schedule-icon">
-                        <svg viewBox="0 0 100 100" width="80" height="80">
-                            <rect x="10" y="20" width="80" height="70" rx="5" fill="#e6f2ff" stroke="#1a6fc4" stroke-width="3"/>
-                            <rect x="10" y="20" width="80" height="15" fill="#1a6fc4"/>
-                            <text x="50" y="32" text-anchor="middle" fill="white" font-size="10">جدول الامتحانات</text>
-                            <line x1="10" y1="40" x2="90" y2="40" stroke="#1a6fc4" stroke-width="2"/>
-                            <line x1="30" y1="20" x2="30" y2="90" stroke="#1a6fc4" stroke-width="2"/>
-                            <text x="20" y="50" text-anchor="middle" fill="#1a6fc4" font-size="8">السبت</text>
-                            <text x="20" y="65" text-anchor="middle" fill="#1a6fc4" font-size="8">الأحد</text>
-                            <text x="20" y="80" text-anchor="middle" fill="#1a6fc4" font-size="8">الاثنين</text>
-                        </svg>
-                    </div>
-                    <h3>جدول الامتحانات - النهائية</h3>
-                    <a href="#" class="view-btn">عرض الجدول <i class="fas fa-eye"></i></a>
-                </div>
-                
-                <div class="schedule-card">
-                    <div class="schedule-icon">
-                        <svg viewBox="0 0 100 100" width="80" height="80">
-                            <rect x="10" y="20" width="80" height="70" rx="5" fill="#e6f2ff" stroke="#1a6fc4" stroke-width="3"/>
-                            <rect x="10" y="20" width="80" height="15" fill="#1a6fc4"/>
-                            <text x="50" y="32" text-anchor="middle" fill="white" font-size="10">جدول الأعمال</text>
-                            <line x1="10" y1="40" x2="90" y2="40" stroke="#1a6fc4" stroke-width="2"/>
-                            <line x1="30" y1="20" x2="30" y2="90" stroke="#1a6fc4" stroke-width="2"/>
-                            <text x="20" y="50" text-anchor="middle" fill="#1a6fc4" font-size="8">السبت</text>
-                            <text x="20" y="65" text-anchor="middle" fill="#1a6fc4" font-size="8">الأحد</text>
-                            <text x="20" y="80" text-anchor="middle" fill="#1a6fc4" font-size="8">الاثنين</text>
-                        </svg>
-                    </div>
-                    <h3>جدول الأعمال - المشاريع</h3>
-                    <a href="#" class="view-btn">عرض الجدول <i class="fas fa-eye"></i></a>
-                </div>
-            </div>
-        </section>
 
-        <!-- صفحة حاسبة GPA -->
-        <section id="gpa" class="page">
-            <h2><i class="fas fa-calculator"></i> حاسبة المعدل التراكمي (GPA)</h2>
-            
-            <div class="gpa-calculator">
-                <div class="calculator-form">
-                    <div class="input-group">
-                        <label for="courseCount">عدد المواد:</label>
-                        <input type="number" id="courseCount" min="1" max="10" value="1">
-                        <button id="generateCourses">إنشاء جدول المواد</button>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calculator"></i>
                     </div>
-                    
-                    <div id="coursesTable" class="courses-table">
-                        <!-- سيتم إنشاء الجدول ديناميكيًا باستخدام JavaScript -->
-                    </div>
-                    
-                    <div class="result-section">
-                        <button id="calculateGPA">احسب المعدل التراكمي</button>
-                        <div id="gpaResult" class="gpa-result"></div>
-                    </div>
+                    <h3>حاسبة المعدل التراكمي</h3>
+                    <p>احسب معدلك التراكمي بسهولة ودقة</p>
+                    <a href="gpa.html" class="btn">احسب معدلك</a>
                 </div>
-                
-                <div class="calculator-guide">
-                    <h3>دليل الدرجات:</h3>
-                    <ul>
-                        <li>A: 4.0 نقاط</li>
-                        <li>B+: 3.5 نقاط</li>
-                        <li>B: 3.0 نقاط</li>
-                        <li>C+: 2.5 نقاط</li>
-                        <li>C: 2.0 نقاط</li>
-                        <li>D+: 1.5 نقاط</li>
-                        <li>D: 1.0 نقاط</li>
-                        <li>F: 0 نقاط</li>
-                    </ul>
-                    
-                    <div class="guide-icon">
-                        <svg viewBox="0 0 100 100" width="100" height="100">
-                            <circle cx="50" cy="50" r="45" fill="#e6f2ff" stroke="#1a6fc4" stroke-width="2"/>
-                            <path d="M30,35 L70,35 L70,65 L30,65 Z" fill="none" stroke="#1a6fc4" stroke-width="2"/>
-                            <line x1="30" y1="45" x2="70" y2="45" stroke="#1a6fc4" stroke-width="2"/>
-                            <line x1="30" y1="55" x2="70" y2="55" stroke="#1a6fc4" stroke-width="2"/>
-                            <text x="50" y="42" text-anchor="middle" fill="#1a6fc4" font-size="10">G</text>
-                            <text x="50" y="52" text-anchor="middle" fill="#1a6fc4" font-size="10">P</text>
-                            <text x="50" y="62" text-anchor="middle" fill="#1a6fc4" font-size="10">A</text>
-                            <text x="50" y="80" text-anchor="middle" fill="#1a6fc4" font-size="12">Calculator</text>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- صفحة الروابط -->
-        <section id="links" class="page">
-            <h2><i class="fas fa-link"></i> الروابط المفيدة</h2>
-            
-            <div class="links-container">
-                <div class="link-card">
-                    <div class="link-icon">
-                        <i class="fas fa-globe"></i>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-link"></i>
                     </div>
-                    <div class="link-info">
-                        <h3>موقع الجامعة الرسمي</h3>
-                        <p>الموقع الرسمي للجامعة يحتوي على جميع الأخبار والإعلانات المهمة</p>
-                    </div>
-                    <a href="#" class="link-btn">زيارة الموقع <i class="fas fa-external-link-alt"></i></a>
-                </div>
-                
-                <div class="link-card">
-                    <div class="link-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <div class="link-info">
-                        <h3>نظام النتائج</h3>
-                        <p>اطلع على نتائج الامتحانات والفصول الدراسية</p>
-                    </div>
-                    <a href="#" class="link-btn">زيارة الموقع <i class="fas fa-external-link-alt"></i></a>
-                </div>
-                
-                <div class="link-card">
-                    <div class="link-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <div class="link-info">
-                        <h3>مجموعات الطلاب</h3>
-                        <p>انضم إلى مجموعات الطلاب على منصات التواصل الاجتماعي</p>
-                    </div>
-                    <a href="#" class="link-btn">انضم الآن <i class="fas fa-external-link-alt"></i></a>
-                </div>
-                
-                <div class="link-card">
-                    <div class="link-icon">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <div class="link-info">
-                        <h3>المكتبة الرقمية</h3>
-                        <p>استفد من الموارد التعليمية الإضافية المتاحة</p>
-                    </div>
-                    <a href="#" class="link-btn">استعرض المصادر <i class="fas fa-external-link-alt"></i></a>
-                </div>
-                
-                <div class="link-card">
-                    <div class="link-icon">
-                        <i class="fas fa-calendar-check"></i>
-                    </div>
-                    <div class="link-info">
-                        <h3>نظام الحضور</h3>
-                        <p>تابع سجل حضورك للمحاضرات والأنشطة</p>
-                    </div>
-                    <a href="#" class="link-btn">تسجيل الدخول <i class="fas fa-external-link-alt"></i></a>
-                </div>
-                
-                <div class="link-card">
-                    <div class="link-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="link-info">
-                        <h3>البريد الإلكتروني</h3>
-                        <p>ادخل إلى بريدك الإلكتروني الجامعي</p>
-                    </div>
-                    <a href="#" class="link-btn">الدخول إلى البريد <i class="fas fa-external-link-alt"></i></a>
+                    <h3>روابط مفيدة</h3>
+                    <p>وصول سريع لجميع الروابط المهمة</p>
+                    <a href="links.html" class="btn">استعرض الروابط</a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- الفوتر -->
-    <footer>
-        <div class="footer-content">
-            <p>© 2023 الموقع الجامعي - جميع الحقوق محفوظة</p>
-            <p>صمم لخدمة الطلاب الجامعيين</p>
-        </div>
-        
-        <div class="footer-wave">
-            <svg viewBox="0 0 1200 100" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#0c4080" d="M0,70 Q300,30 600,70 Q900,110 1200,70 L1200,100 L0,100 Z"></path>
-            </svg>
-        </div>
+    <footer class="footer">
+        <p>&copy; 2023 الموقع الجامعي. جميع الحقوق محفوظة.</p>
     </footer>
+
+    <!-- زر العودة للأعلى -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
