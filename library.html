@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الموقع الجامعي - المكتبة</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNNCAxOWEyIDIgMCAwIDAgMiAyaDEyYTIgMiAwIDAgMCAyLTJWOGEyIDIgMCAwIDAtMi0ySDZhMiAyIDAgMCAwLTIgMnYxMXoiPjwvcGF0aD48cG9seWxpbmUgcG9pbnRzPSIyLCA4IDIyLCA4Ij48L3BvbHlsaW5lPjxwYXRoIGQ9Ik02IDF2M20xMi0ydjQiPjwvcGF0aD48L3N2Zz4=" alt="Logo">
+                <span>الموقع الجامعي</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li class="nav-item"><a href="library.html" class="nav-link active"><i class="fas fa-book"></i> المكتبة</a></li>
+                <li class="nav-item"><a href="schedules.html" class="nav-link"><i class="fas fa-calendar"></i> الجداول</a></li>
+                <li class="nav-item"><a href="gpa.html" class="nav-link"><i class="fas fa-calculator"></i> حاسبة GPA</a></li>
+                <li class="nav-item"><a href="links.html" class="nav-link"><i class="fas fa-link"></i> الروابط</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="banner">
+        <div class="banner-content">
+            <h1>مكتبة الملازم والكتب</h1>
+            <p>جميع الكتب والملازم الدراسية متاحة للتحميل</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="library-section">
+            <h2>المواد الدراسية</h2>
+            
+            <div class="table-container">
+                <table class="books-table">
+                    <thead>
+                        <tr>
+                            <th>المادة</th>
+                            <th>التحميل</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="subject-with-icon">
+                                    <i class="fas fa-book book-icon"></i>
+                                    <span>الرياضيات الهندسية</span>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="#" class="download-btn">
+                                    <i class="fas fa-download"></i> تحميل
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="subject-with-icon">
+                                    <i class="fas fa-book book-icon"></i>
+                                    <span>فيزياء عامة</span>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="#" class="download-btn">
+                                    <i class="fas fa-download"></i> تحميل
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="subject-with-icon">
+                                    <i class="fas fa-book book-icon"></i>
+                                    <span>كيمياء</span>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="#" class="download-btn">
+                                    <i class="fas fa-download"></i> تحميل
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="subject-with-icon">
+                                    <i class="fas fa-book book-icon"></i>
+                                    <span>لغة عربية</span>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="#" class="download-btn">
+                                    <i class="fas fa-download"></i> تحميل
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="subject-with-icon">
+                                    <i class="fas fa-book book-icon"></i>
+                                    <span>لغة إنجليزية</span>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="#" class="download-btn">
+                                    <i class="fas fa-download"></i> تحميل
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2023 الموقع الجامعي. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

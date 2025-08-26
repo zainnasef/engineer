@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الموقع الجامعي - حاسبة GPA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNNCAxOWEyIDIgMCAwIDAgMiAyaDEyYTIgMiAwIDAgMCAyLTJWOGEyIDIgMCAwIDAtMi0ySDZhMiAyIDAgMCAwLTIgMnYxMXoiPjwvcGF0aD48cG9seWxpbmUgcG9pbnRzPSIyLCA4IDIyLCA4Ij48L3BvbHlsaW5lPjxwYXRoIGQ9Ik02IDF2M20xMi0ydjQiPjwvcGF0aD48L3N2Zz4=" alt="Logo">
+                <span>الموقع الجامعي</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li class="nav-item"><a href="library.html" class="nav-link"><i class="fas fa-book"></i> المكتبة</a></li>
+                <li class="nav-item"><a href="schedules.html" class="nav-link"><i class="fas fa-calendar"></i> الجداول</a></li>
+                <li class="nav-item"><a href="gpa.html" class="nav-link active"><i class="fas fa-calculator"></i> حاسبة GPA</a></li>
+                <li class="nav-item"><a href="links.html" class="nav-link"><i class="fas fa-link"></i> الروابط</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="banner">
+        <div class="banner-content">
+            <h1>حاسبة المعدل التراكمي (GPA)</h1>
+            <p>احسب معدلك التراكمي بسهولة باستخدام هذه الأداة</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="gpa-section">
+            <h2>حاسبة المعدل التراكمي</h2>
+            
+            <div class="gpa-calculator">
+                <div class="input-group">
+                    <label for="courseCount">عدد المواد:</label>
+                    <input type="number" id="courseCount" min="1" value="1">
+                    <button id="generateCourses" class="btn">إنشاء حقول المواد</button>
+                </div>
+                
+                <div id="coursesContainer"></div>
+                
+                <button id="calculateGPA" class="btn calculate-btn">احسب المعدل</button>
+                
+                <div id="result" class="result-container"></div>
+            </div>
+            
+            <div class="grades-guide">
+                <h3>دليل الدرجات:</h3>
+                <table class="grades-table">
+                    <thead>
+                        <tr>
+                            <th>الدرجة</th>
+                            <th>القيمة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>A+</td><td>4.0</td></tr>
+                        <tr><td>A</td><td>4.0</td></tr>
+                        <tr><td>B+</td><td>3.5</td></tr>
+                        <tr><td>B</td><td>3.0</td></tr>
+                        <tr><td>C+</td><td>2.5</td></tr>
+                        <tr><td>C</td><td>2.0</td></tr>
+                        <tr><td>D+</td><td>1.5</td></tr>
+                        <tr><td>D</td><td>1.0</td></tr>
+                        <tr><td>F</td><td>0.0</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2023 الموقع الجامعي. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
